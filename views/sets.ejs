@@ -40,6 +40,7 @@
           <h1 class="text-5xl font-bold">Gathering</h1>
           <p class="py-6">Design, Build, and Play: Enter the LEGO Playground of Possibilities</p>
           <a href="/lego/sets" class="btn btn-primary">Get Started Now</a>
+          <a href="/" class="btn btn-primary">Back to Set</a>
         </div>
       </div>
     </div>
@@ -51,7 +52,7 @@
         <tr>
           <th class="px-4 py-2 border">Image</th>
           <th class="px-4 py-2 border">Name</th>
-          <th class="px-4 py-2 border">Actions</th>
+          <th class="px-4 py-2 border">Informations</th>
         </tr>
       </thead>
       <tbody>
@@ -59,6 +60,7 @@
         <tr>
           <td class="border px-4 py-2"><img src="<%= set.img_url %>" alt="<%= set.name %>" class="w-full h-auto"></td>
           <td class="border px-4 py-2"><%= set.name %></td>
+          <td><span class="font-bold">Year: </span> <%= set.year %> - <span class="font-bold">Parts:</span> <%= set.num_parts %></td>
           <td class="border px-4 py-2"><a href="/lego/sets/<%= set.set_num %>" class="btn btn-primary">View Details</a></td>
         </tr>
         <% }) %>
