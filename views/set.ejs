@@ -33,8 +33,10 @@
           <p>Year: <%= set.year %></p>
           <p>Theme: <%= set.theme.name %></p>
           <p>Number of Parts: <%= set.num_parts %></p>
-          <!-- Edit button -->
-          <p><a href="/lego/editSet/<%= set.set_num %>" class="btn btn-primary">Edit</a></p>
+          <% if(session.user) { %>
+            <!-- Edit button -->
+            <p><a href="/lego/editSet/<%= set.set_num %>" class="btn btn-primary">Edit</a></p>
+          <% } %>
         </div>
       </div>
       <br />
